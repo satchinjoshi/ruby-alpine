@@ -4,7 +4,7 @@ FROM ruby:2.4-alpine3.6
 RUN apk update && apk add --no-cache build-base postgresql-dev tzdata
 
 # Install deps for awscli to upload to s3
-RUN apk -Uuv add --no-cache groff less python py-pip ca-certificates
+RUN apk -Uuv add --no-cache groff less python python-dev py-pip ca-certificates
 
 # Install nodejs
 ENV NPM_CONFIG_LOGLEVEL info
